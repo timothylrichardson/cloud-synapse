@@ -1,9 +1,9 @@
 ---
-title: "MultiCloud DevOps AI Challenge: Day 2 — Building the Foundation"
+title: "MultiCloud AI with Terraform & Docker"
 seoTitle: "MultiCloud DevOps Day 2: Terraform & Docker Basics"
 datePublished: Tue Mar 18 2025 05:20:35 GMT+0000 (Coordinated Universal Time)
 cuid: cm8e1ovs8000c09kz8pb9dhqg
-slug: multicloud-devops-ai-challenge-day-2-building-the-foundation
+slug: multicloud-ai-with-terraform-and-docker
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1742274777319/eb6cf232-6496-4f36-a16f-9eee858a1112.png
 tags: devops-multicloud-terraform-docker-ai
 
