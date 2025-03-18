@@ -1,51 +1,66 @@
-# Deploying a Microservices E-Commerce App  
-### A Comprehensive Guide to Containerizing and Orchestrating with Docker, Kubernetes, and AWS EKS  
+## Cloud Synapse - Setup Guide
 
-## 📖 Description  
-This guide provides a step-by-step approach to deploying a **microservices-based e-commerce application** using **Docker** and **Kubernetes** on **AWS EKS**. It covers:  
-- Containerization  
-- Storing images in **AWS ECR**  
-- Managing workloads with **Amazon EKS**  
-- Implementing **infrastructure automation**  
-- Security best practices  
+### Prerequisites
+Ensure you have the following installed before proceeding:
 
-## 🚀 Features  
-- **Docker** for containerization  
-- **Kubernetes** for orchestration  
-- **AWS EKS** for scalable deployment  
-- **Infrastructure automation**  
-- **Microservices architecture**  
-- **CI/CD integration**  
-- **Security best practices**  
+- **Docker** (https://docs.docker.com/get-docker/)
+- **Kubernetes (kubectl & minikube or a cluster)** (https://kubernetes.io/docs/setup/)
+- **Helm** (https://helm.sh/docs/intro/install/)
+- **AWS CLI** (if deploying to AWS) (https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
 
-## 🛠 Installation  
-Clone the repository:  
-```sh
-git clone https://github.com/timothylrichardson/cloud-synapse
-cd cloud-synapse
+### Local Setup
 
-⚡ Usage: Getting Started with Docker
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/your-org/cloud-synapse.git
+   cd cloud-synapse
+   ```
 
-Run the following commands to set up Docker:
-sudo yum update -y
-sudo yum install docker -y
-sudo systemctl start docker
-sudo docker run hello-world
-sudo systemctl enable docker
-docker --version
-sudo usermod -aG docker $(whoami)
-newgrp docker
+2. **Build and run the Docker container**
+   ```sh
+   docker build -t cloud-synapse .
+   docker run -p 8080:8080 cloud-synapse
+   ```
 
-🏗 Tech Stack
+3. **Verify the service is running**
+   ```sh
+   curl http://localhost:8080/health
+   ```
 
-Docker
-Kubernetes
-AWS EKS
-Infrastructure Automation
-Microservices
-CI/CD
+### Kubernetes Deployment
 
-📜 License
+1. **Start Minikube (if using local cluster)**
+   ```sh
+   minikube start
+   ```
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+2. **Deploy to Kubernetes**
+   ```sh
+   kubectl apply -f k8s/
+   ```
 
+3. **Verify deployment**
+   ```sh
+   kubectl get pods
+   kubectl get services
+   ```
+
+### AWS Deployment (Optional)
+
+1. **Authenticate AWS CLI**
+   ```sh
+   aws configure
+   ```
+
+2. **Deploy using Helm (if applicable)**
+   ```sh
+   helm upgrade --install cloud-synapse helm/cloud-synapse -n cloud-synapse
+   ```
+
+3. **Monitor the deployment**
+   ```sh
+   kubectl get pods -n cloud-synapse
+   ```
+
+---
+For troubleshooting, refer to the [docs](docs/README.md) or reach out to the maintainers.
