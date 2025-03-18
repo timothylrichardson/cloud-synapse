@@ -5,6 +5,7 @@ datePublished: Tue Mar 18 2025 05:20:35 GMT+0000 (Coordinated Universal Time)
 cuid: cm8e1ovs8000c09kz8pb9dhqg
 slug: multicloud-devops-ai-challenge-day-2-building-the-foundation
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1742288326919/02ae64e7-4410-41de-826a-e3a674b9a30c.webp
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1742288405767/b7948a0c-10c4-4103-b32c-d0678740aef9.webp
 tags: devops-multicloud-terraform-docker-ai
 
 ---
